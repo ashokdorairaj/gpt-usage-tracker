@@ -18,3 +18,10 @@ def serve_openapi():
 
 if __name__ == "__main__":
     app.run(debug=False, port=int(os.environ.get("PORT", 8080)), host="0.0.0.0")
+@app.route("/logs", methods=["GET"])
+def view_logs():
+    if not os.path.exists("usage_log.txt"):
+        return "No logs found yet."
+    with open("usage_log.txt", "r") as f:
+        content = f.read()
+    return f"<pre>{content}</pre>"
