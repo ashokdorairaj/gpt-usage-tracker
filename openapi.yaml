@@ -2,6 +2,8 @@ openapi: 3.0.0
 info:
   title: GPT Usage Logger
   version: 1.0.0
+servers:
+  - url: https://gpt-usage-tracker.onrender.com
 paths:
   /log-gpt-usage:
     post:
@@ -21,5 +23,5 @@ paths:
                 message_summary:
                   type: string
       responses:
-        '200':
+        "200":
           description: Successfully logged
