@@ -1,0 +1,15 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Usage Tracker",
+  "name_for_model": "usage_tracker",
+  "description_for_human": "Logs when users interact with this GPT.",
+  "description_for_model": "Use this tool to log user interactions.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://your-deployment-url/openapi.yaml"
+  },
+  "logo_url": "https://yourdomain.com/logo.png"
+}

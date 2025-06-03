@@ -1,0 +1,25 @@
+openapi: 3.0.0
+info:
+  title: GPT Usage Logger
+  version: 1.0.0
+paths:
+  /log-gpt-usage:
+    post:
+      summary: Log user interaction
+      operationId: logGPTUsage
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                gpt_name:
+                  type: string
+                timestamp:
+                  type: string
+                message_summary:
+                  type: string
+      responses:
+        '200':
+          description: Successfully logged
